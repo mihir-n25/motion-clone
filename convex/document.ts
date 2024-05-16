@@ -136,6 +136,8 @@ export const getTrash = query({
     .filter((q) => q.eq(q.field("isArchived") , true))
     .order("desc")
       .collect();
+
+      return documents;
   }
 })
 export const restore = mutation({

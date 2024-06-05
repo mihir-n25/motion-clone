@@ -4,5 +4,19 @@ import { useEffect , useState } from "react"
 import { SettingModal } from "../modals/settings-modal"
 
 export const ModalProvider = () => {
-    const [isMounted , setIsmounted] = useState(false)
+    const [isMounted , setIsMounted] = useState(false)
+
+    useEffect(() => {
+        setIsMounted(true)
+    }, []);
+
+    if(!isMounted){
+        return null;
+    }
+
+    return (
+        <>
+        <SettingModal/>
+        </>
+    )
 }

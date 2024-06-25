@@ -310,4 +310,4 @@ export const remove = mutation({
 
     return document;
   }
-  })
+  }) 

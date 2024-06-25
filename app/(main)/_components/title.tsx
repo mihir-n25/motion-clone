@@ -6,6 +6,8 @@ import {api} from "@/convex/_generated/api";
 import { useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Eye } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface TitleProps {
     initialData : Doc<"documents">;
@@ -81,3 +83,9 @@ const onKeyDown = ((
 }
  
 export default Title;
+
+Title.Skelton = function TitleSkeleton() {
+    return (
+        <Skeleton className="h-6 w-20 rounded-md"/>
+    )
+}

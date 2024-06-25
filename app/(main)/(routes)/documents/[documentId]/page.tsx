@@ -1,4 +1,11 @@
-const DocumentId = () => {
+"use client";
+
+import { useQuery } from "convex/react";
+
+import {api} from "@/convex/_generated/api"
+
+
+const DocumentIdPage = () => {
     return ( 
         <div>
             DocumentId
@@ -6,4 +13,4 @@ const DocumentId = () => {
      );
 }
  
-export default DocumentId;
+export default DocumentIdPage;

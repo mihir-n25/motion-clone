@@ -28,7 +28,7 @@ export const CoverImageModal = () => {
 
     const coverImage = useCoverImage();
 
-    const onclose = () => {
+    const onClose = () => {
         setFile(undefined)
         setIsSubmitting(false)
         coverImage.onClose()
@@ -44,11 +44,11 @@ export const CoverImageModal = () => {
             });
 
             await update({
-                id : params.documentID as Id<"documents">,
+                id : params.documentId as Id<"documents">,
                 coverImage : res.url,
             })
 
-            onclose();
+            onClose();
         }
     }
 
@@ -66,7 +66,6 @@ export const CoverImageModal = () => {
                value={file}
                onChange={onChange}
                >
-
                </SingleImageDropzone>
             </DialogContent>
         </Dialog>

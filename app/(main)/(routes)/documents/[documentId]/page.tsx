@@ -6,6 +6,7 @@ import {api} from "@/convex/_generated/api"
 import { Id } from "@/convex/_generated/dataModel";
 import { Toolbar } from "@/components/toolbar";
 import { Cover } from "@/components/cover";
+import { mutation } from "@/convex/_generated/server";
 
 interface DocumentIdPageProps {
     params : {
@@ -46,3 +47,4 @@ const DocumentIdPage = ({
 }
  
 export default DocumentIdPage;
+

@@ -110,7 +110,7 @@ const Item = ({
                         {documentIcon}
                         </div>
                 ) : (
-                    <Icon className="shrink-0 mr-2 text-[18px]"
+                    <Icon className="shrink-0 mr-2 h-[18px] w-[18px] text-muted-foreground"
                     />
                 )
             }

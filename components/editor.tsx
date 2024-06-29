@@ -7,6 +7,7 @@ import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
 import { useTheme } from "next-themes";
 import { useCallback } from "react";
+import { useEdgeStore } from "@/lib/edgestore";
 
 interface EditorProps {
     onChange : (value : string) => void;
@@ -14,17 +15,28 @@ interface EditorProps {
     editable?: boolean;
 };
 
-export const Editor = ({
+ const Editor = ({
     onChange,
     initialContent,
     editable
 } : EditorProps) => {
 
+    const {resolvedTheme} = useTheme();
+    const {edgestore} = useEdgeStore();
+
+    const handleUpload = async(file : File) => {
+        const response = await edgestore.publicFiles.upload({
+            file
+        });
+
+        return response.url
+    }
 
     const editor: BlockNoteEditor | null = useCreateBlockNote({
         initialContent: initialContent
           ? (JSON.parse(initialContent) as PartialBlock[])
           : undefined,
+          uploadFile : handleUpload
       });
 
     const uploadToDatabase = useCallback(() => {
@@ -33,10 +45,7 @@ export const Editor = ({
             onChange(JSON.stringify(editor.document));
           }, 1000);
         }
-      }, [editor, onChange]);
-
-    
-    const {resolvedTheme} = useTheme();
+      }, [editor, onChange]);   
 
     return(
         <BlockNoteView
@@ -47,3 +56,5 @@ export const Editor = ({
       />
     )
 }
+
+export default Editor;

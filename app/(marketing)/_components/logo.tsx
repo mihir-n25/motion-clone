@@ -11,14 +11,14 @@ const Logo = () => {
     return ( 
         <div className="hidden md:flex items-center gap-x-2">
             <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="logo"
             height='40'
             width='40'
             className="dark:hidden"
             />
             <Image
-            src="/logo-dark.png"
+            src="/logo-dark.svg"
             alt="logo"
             height='40'
             width='40'

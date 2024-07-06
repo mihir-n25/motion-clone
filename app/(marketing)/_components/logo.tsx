@@ -18,7 +18,7 @@ const Logo = () => {
             className="dark:hidden"
             />
             <Image
-            src="/logo.png"
+            src="/logo-dark.png"
             alt="logo"
             height='40'
             width='40'

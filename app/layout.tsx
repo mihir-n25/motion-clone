@@ -12,19 +12,19 @@ import { EdgeStoreProvider } from "@/lib/edgestore";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Motion",
+  title: "Notion",
   description: "Can make your workspace where better",
   icons : {
     icon : [
       {
        media : "(prefer-color-scheme : light)",
        url : "/logo.svg",
-      //  href : "logo.svg"
+       href : "logo.svg"
       },
       {
        media : "(prefer-color-scheme : dark)",
        url : "/logo-dark.svg",
-      //  href : "logo-dark.svg"
+       href : "logo-dark.svg"
       },
     ]
   }

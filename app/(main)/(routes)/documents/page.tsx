@@ -45,7 +45,7 @@ const DocumentPage = () => {
       />
 
 <h2 className="text-lg font-medium">
-    Welcome to {isSignedIn && user?.fullName ? `${user.fullName}'s` : ''} Motion
+    Welcome to {isSignedIn && user?.fullName ? `${user.fullName}'s` : ''} Notion
 </h2>
 
       <Button onClick={onCreate}>

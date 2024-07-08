@@ -18,7 +18,7 @@ const UserItem = () => {
                         <AvatarImage src={user?.imageUrl}/>
                     </Avatar>
                     <span>
-                        {user?.firstName}&apos;s Motion 
+                        {user?.firstName}&apos;s Notion 
                     </span>
                    </div>
                    <ChevronsLeftRight className="rotate-90 ml-2 text-muted-foreground h-4 w-4"/>
@@ -39,7 +39,7 @@ const UserItem = () => {
                             </Avatar>
                         </div>
                         <div className="space-y-1">
-                            <p className="text-sm line-clamp-1">{user?.fullName}&apos;s Motion</p>
+                            <p className="text-sm line-clamp-1">{user?.fullName}&apos;s Notion</p>
                         </div>
                     </div>
                 </div>

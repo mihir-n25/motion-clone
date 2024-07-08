@@ -34,7 +34,7 @@ const Navbar = () => {
                         </SignInButton>
                         <SignInButton mode="modal">
                             <Button size="sm">
-                                Get Motion
+                                Get Notion
                             </Button>
                         </SignInButton>
                         </>

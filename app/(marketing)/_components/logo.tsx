@@ -25,7 +25,7 @@ const Logo = () => {
             className="hidden dark:block"
             />
             <p className={cn("font-semibold" , font.className)}>
-                Motion
+                Notion
             </p>
         </div>
      );

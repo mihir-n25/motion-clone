@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Notion",
-  description: "Can make your workspace where better",
+  description: "Can make your workspace better",
   icons : {
     icon : [
       {

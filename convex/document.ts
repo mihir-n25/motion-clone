@@ -267,9 +267,9 @@ export const remove = mutation({
 
       const userId = identity.subject;
 
-      if(document.userId !== userId){
-        throw new Error("Unauthorized")
-      }
+      // if(document.userId !== userId){
+      //   throw new Error("Unauthorized")
+      // }
       return document;
     }
   })

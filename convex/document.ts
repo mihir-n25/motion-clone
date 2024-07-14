@@ -105,7 +105,7 @@ export const create = mutation({
       throw new Error("Not Authenticated");
     }
 
-    const userId = identity.subject;
+    const userId = identity.subject;           // mongooose me id likhte the vse hi unique value
 
     const document = await ctx.db.insert("documents", {
       title: args.title,
@@ -249,7 +249,7 @@ export const remove = mutation({
   })
 
   export const getById = query({
-    args : {documentId : v.id("documents")},
+    args : {documentId : v.id("documents")},    //signifies that documentId is a valid Id coming from 'documents' DB model
     handler : async (ctx , args) => {
       const identity = await ctx.auth.getUserIdentity();
 
